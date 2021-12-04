@@ -1,6 +1,13 @@
 part of 'user_bloc.dart';
 
-@immutable
-abstract class UserState {}
+@freezed
+abstract class UserState with _$UserState {
 
-class UserInitial extends UserState {}
+  const factory UserState.initial() = Initial;
+
+  const factory UserState.loadInProgress() = DataInProgress;
+
+  const factory UserState.loadSuccess(List<UsersEntity> notes) = LoadSuccess;
+
+  const factory UserState.loadFailure(UserFailure userFailure) =LoadFailure;
+}
