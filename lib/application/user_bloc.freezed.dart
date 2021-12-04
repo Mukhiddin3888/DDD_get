@@ -183,7 +183,7 @@ class _$UserStateTearOff {
     return const DataInProgress();
   }
 
-  LoadSuccess loadSuccess(List<UsersEntity> users) {
+  LoadSuccess loadSuccess(List<UserDto> users) {
     return LoadSuccess(
       users,
     );
@@ -205,7 +205,7 @@ mixin _$UserState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadInProgress,
-    required TResult Function(List<UsersEntity> users) loadSuccess,
+    required TResult Function(List<UserDto> users) loadSuccess,
     required TResult Function(UserFailure userFailure) loadFailure,
   }) =>
       throw _privateConstructorUsedError;
@@ -213,7 +213,7 @@ mixin _$UserState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function(List<UsersEntity> users)? loadSuccess,
+    TResult Function(List<UserDto> users)? loadSuccess,
     TResult Function(UserFailure userFailure)? loadFailure,
   }) =>
       throw _privateConstructorUsedError;
@@ -221,7 +221,7 @@ mixin _$UserState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function(List<UsersEntity> users)? loadSuccess,
+    TResult Function(List<UserDto> users)? loadSuccess,
     TResult Function(UserFailure userFailure)? loadFailure,
     required TResult orElse(),
   }) =>
@@ -307,7 +307,7 @@ class _$Initial implements Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadInProgress,
-    required TResult Function(List<UsersEntity> users) loadSuccess,
+    required TResult Function(List<UserDto> users) loadSuccess,
     required TResult Function(UserFailure userFailure) loadFailure,
   }) {
     return initial();
@@ -318,7 +318,7 @@ class _$Initial implements Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function(List<UsersEntity> users)? loadSuccess,
+    TResult Function(List<UserDto> users)? loadSuccess,
     TResult Function(UserFailure userFailure)? loadFailure,
   }) {
     return initial?.call();
@@ -329,7 +329,7 @@ class _$Initial implements Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function(List<UsersEntity> users)? loadSuccess,
+    TResult Function(List<UserDto> users)? loadSuccess,
     TResult Function(UserFailure userFailure)? loadFailure,
     required TResult orElse(),
   }) {
@@ -422,7 +422,7 @@ class _$DataInProgress implements DataInProgress {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadInProgress,
-    required TResult Function(List<UsersEntity> users) loadSuccess,
+    required TResult Function(List<UserDto> users) loadSuccess,
     required TResult Function(UserFailure userFailure) loadFailure,
   }) {
     return loadInProgress();
@@ -433,7 +433,7 @@ class _$DataInProgress implements DataInProgress {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function(List<UsersEntity> users)? loadSuccess,
+    TResult Function(List<UserDto> users)? loadSuccess,
     TResult Function(UserFailure userFailure)? loadFailure,
   }) {
     return loadInProgress?.call();
@@ -444,7 +444,7 @@ class _$DataInProgress implements DataInProgress {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function(List<UsersEntity> users)? loadSuccess,
+    TResult Function(List<UserDto> users)? loadSuccess,
     TResult Function(UserFailure userFailure)? loadFailure,
     required TResult orElse(),
   }) {
@@ -501,7 +501,7 @@ abstract class $LoadSuccessCopyWith<$Res> {
   factory $LoadSuccessCopyWith(
           LoadSuccess value, $Res Function(LoadSuccess) then) =
       _$LoadSuccessCopyWithImpl<$Res>;
-  $Res call({List<UsersEntity> users});
+  $Res call({List<UserDto> users});
 }
 
 /// @nodoc
@@ -522,7 +522,7 @@ class _$LoadSuccessCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
       users == freezed
           ? _value.users
           : users // ignore: cast_nullable_to_non_nullable
-              as List<UsersEntity>,
+              as List<UserDto>,
     ));
   }
 }
@@ -533,7 +533,7 @@ class _$LoadSuccess implements LoadSuccess {
   const _$LoadSuccess(this.users);
 
   @override
-  final List<UsersEntity> users;
+  final List<UserDto> users;
 
   @override
   String toString() {
@@ -562,7 +562,7 @@ class _$LoadSuccess implements LoadSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadInProgress,
-    required TResult Function(List<UsersEntity> users) loadSuccess,
+    required TResult Function(List<UserDto> users) loadSuccess,
     required TResult Function(UserFailure userFailure) loadFailure,
   }) {
     return loadSuccess(users);
@@ -573,7 +573,7 @@ class _$LoadSuccess implements LoadSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function(List<UsersEntity> users)? loadSuccess,
+    TResult Function(List<UserDto> users)? loadSuccess,
     TResult Function(UserFailure userFailure)? loadFailure,
   }) {
     return loadSuccess?.call(users);
@@ -584,7 +584,7 @@ class _$LoadSuccess implements LoadSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function(List<UsersEntity> users)? loadSuccess,
+    TResult Function(List<UserDto> users)? loadSuccess,
     TResult Function(UserFailure userFailure)? loadFailure,
     required TResult orElse(),
   }) {
@@ -633,9 +633,9 @@ class _$LoadSuccess implements LoadSuccess {
 }
 
 abstract class LoadSuccess implements UserState {
-  const factory LoadSuccess(List<UsersEntity> users) = _$LoadSuccess;
+  const factory LoadSuccess(List<UserDto> users) = _$LoadSuccess;
 
-  List<UsersEntity> get users => throw _privateConstructorUsedError;
+  List<UserDto> get users => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $LoadSuccessCopyWith<LoadSuccess> get copyWith =>
       throw _privateConstructorUsedError;
@@ -717,7 +717,7 @@ class _$LoadFailure implements LoadFailure {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadInProgress,
-    required TResult Function(List<UsersEntity> users) loadSuccess,
+    required TResult Function(List<UserDto> users) loadSuccess,
     required TResult Function(UserFailure userFailure) loadFailure,
   }) {
     return loadFailure(userFailure);
@@ -728,7 +728,7 @@ class _$LoadFailure implements LoadFailure {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function(List<UsersEntity> users)? loadSuccess,
+    TResult Function(List<UserDto> users)? loadSuccess,
     TResult Function(UserFailure userFailure)? loadFailure,
   }) {
     return loadFailure?.call(userFailure);
@@ -739,7 +739,7 @@ class _$LoadFailure implements LoadFailure {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadInProgress,
-    TResult Function(List<UsersEntity> users)? loadSuccess,
+    TResult Function(List<UserDto> users)? loadSuccess,
     TResult Function(UserFailure userFailure)? loadFailure,
     required TResult orElse(),
   }) {

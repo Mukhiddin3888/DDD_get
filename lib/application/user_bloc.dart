@@ -2,7 +2,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:ddd_get_stream_test/domain/users/i_user_repository.dart';
 import 'package:ddd_get_stream_test/domain/users/user_failure.dart';
-import 'package:ddd_get_stream_test/domain/users/users_entity.dart';
+import 'package:ddd_get_stream_test/infrastructure/users/user_dto.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 
