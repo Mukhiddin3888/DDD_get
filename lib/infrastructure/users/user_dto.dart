@@ -18,5 +18,8 @@ abstract class UserDto with _$UserDto{
     required String email,
 }) = _UserDto;
 
+
+  factory UserDto.fromJson(Map<String, dynamic> json) => _$UserDtoFromJson(json);
+
 }
 
