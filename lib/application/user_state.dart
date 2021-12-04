@@ -7,7 +7,7 @@ abstract class UserState with _$UserState {
 
   const factory UserState.loadInProgress() = DataInProgress;
 
-  const factory UserState.loadSuccess(List<UsersEntity> notes) = LoadSuccess;
+  const factory UserState.loadSuccess(List<UsersEntity> users) = LoadSuccess;
 
   const factory UserState.loadFailure(UserFailure userFailure) =LoadFailure;
 }
