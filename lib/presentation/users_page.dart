@@ -22,11 +22,11 @@ class UsersPage extends StatelessWidget {
             }
             if(state is LoadSuccess){
               return ListView.builder(
-                itemCount: 5,
+                itemCount: state.users.length,
                 itemBuilder: (context, index) {
-                  return const Card(
+                  return  Card(
                     child:
-                    ListTile(title: Text('items name'),),);
+                    ListTile(title: Text(state.users[index].userName),),);
                 },);
 
             }

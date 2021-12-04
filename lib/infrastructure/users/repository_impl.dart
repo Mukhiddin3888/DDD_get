@@ -12,7 +12,6 @@ class UserRepository implements IUserRepository {
 
   @override
   Future<Either<UserFailure, List<UserDto>>> getAll() async {
-    print('kfvnkjlds');
 
     Dio dio = Dio(BaseOptions(
       connectTimeout: 35000,
