@@ -13,6 +13,10 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+UserDto _$UserDtoFromJson(Map<String, dynamic> json) {
+  return _UserDto.fromJson(json);
+}
+
 /// @nodoc
 class _$UserDtoTearOff {
   const _$UserDtoTearOff();
@@ -27,6 +31,10 @@ class _$UserDtoTearOff {
       email: email,
     );
   }
+
+  UserDto fromJson(Map<String, Object> json) {
+    return UserDto.fromJson(json);
+  }
 }
 
 /// @nodoc
@@ -40,6 +48,7 @@ mixin _$UserDto {
   @JsonKey(defaultValue: '')
   String get email => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $UserDtoCopyWith<UserDto> get copyWith => throw _privateConstructorUsedError;
 }
@@ -129,12 +138,15 @@ class __$UserDtoCopyWithImpl<$Res> extends _$UserDtoCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_UserDto implements _UserDto {
   _$_UserDto(
       {required this.id,
       @JsonKey(name: 'username', defaultValue: '') required this.userName,
       @JsonKey(defaultValue: '') required this.email});
+
+  factory _$_UserDto.fromJson(Map<String, dynamic> json) =>
+      _$$_UserDtoFromJson(json);
 
   @override
   final int id;
@@ -174,6 +186,11 @@ class _$_UserDto implements _UserDto {
   @override
   _$UserDtoCopyWith<_UserDto> get copyWith =>
       __$UserDtoCopyWithImpl<_UserDto>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_UserDtoToJson(this);
+  }
 }
 
 abstract class _UserDto implements UserDto {
@@ -181,6 +198,8 @@ abstract class _UserDto implements UserDto {
       {required int id,
       @JsonKey(name: 'username', defaultValue: '') required String userName,
       @JsonKey(defaultValue: '') required String email}) = _$_UserDto;
+
+  factory _UserDto.fromJson(Map<String, dynamic> json) = _$_UserDto.fromJson;
 
   @override
   int get id => throw _privateConstructorUsedError;

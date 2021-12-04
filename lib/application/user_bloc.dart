@@ -4,6 +4,7 @@ import 'package:ddd_get_stream_test/domain/users/i_user_repository.dart';
 import 'package:ddd_get_stream_test/domain/users/user_failure.dart';
 import 'package:ddd_get_stream_test/domain/users/users_entity.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 
 
 
@@ -13,7 +14,7 @@ part 'user_bloc.freezed.dart';
 part 'user_event.dart';
 part 'user_state.dart';
 
-
+@injectable
 class UserBloc extends Bloc<UserEvent, UserState> {
   UserBloc({ required this.repository}) : super(const UserState.initial()) ;
   final IUserRepository repository;
