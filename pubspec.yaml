@@ -43,6 +43,7 @@ dependencies:
   chopper: ^4.0.1
   connectivity: ^3.0.6
   built_value: ^8.1.2
+  dio: ^4.0.4
 
 dev_dependencies:
   flutter_test:
